@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <p id="demo"></p>
+<body>
+
+    <form>
+        NOME: 
+        <input type="text" required="required" title="Apenas Letras" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" oninvalid="this.setCustomValidity('Nao sao aceitos caracteres especiais')" onchange="try{setCustomValidity('')}catch(e){}" oninput="setCustomValidity(' ')"
+
+        />
+    
+        IDADE:
+        <input type="text" required="required" name="numbers" pattern="[0-9]+$" />
+    
+        EMAIL:
+        <input value="" 
+        name="email" 
+        id="inputEmail"
+        class="form-control"
+        placeholder="email"
+        required=""
+        autofocus="" 
+        oninvalid="this.setCustomValidity('Not Valid')"
+        onchange="try{setCustomValidity('')}catch(e){}"
+        oninput="setCustomValidity(' ')"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+        />
+            
+        <button type="submit">Validar</button>
+    </form>
+
+<script src="teste.js"></script>
+</body>
+</html>
